@@ -1,0 +1,44 @@
+import sys
+from operator import mul
+
+def checkNum(k):
+    while (k == 0):
+        print "The answer is 1"
+        contNum(raw_input("Should we continue? (Yes or No) >"))
+        k = input("Please enter a number to find factorial: >")
+        k = checkNum(k)
+    while(k < 0):
+        print "Number cannot be negative"
+        contNum(raw_input("Should we continue? (Yes or No) >"))
+        k = input("Please enter a number to find factorial: >")
+    return k
+
+def contNum(ans):
+    if (ans == 'yes' or ans == 'Yes'):
+        x = input("Please enter a number to find factorial: >")
+        y = checkNum(x)
+        answer = numFact(y)
+        print "%d! = %.3e" %(y,answer)
+        contNum(raw_input("Should we continue? (Yes or No) >"))
+    else:
+        print "Factorial Program is closing"
+        sys.exit()
+        
+def numFact(l):
+    k = l - 1
+    numList =[]
+    while(l >= k):
+        j = l - k
+        if (k >= 0):
+            numList.append(j)
+            k -= 1
+        else:
+            break
+    return reduce(lambda x, y: x * y, numList)
+    contNum(raw_input("Should we continue? (Yes or No) >"))
+    
+def printNum(answer):
+    print "The answers is %.3e" %(answer)
+    contNum(raw_input("Should we continue? (Yes or No) >"))
+    
+printNum(numFact(checkNum(input("Please enter a number to find factorial: >")))) 

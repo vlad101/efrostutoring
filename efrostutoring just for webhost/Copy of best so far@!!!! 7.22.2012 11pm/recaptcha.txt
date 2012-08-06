@@ -1,0 +1,6 @@
+Public Key: 	6LdJ49QSAAAAANNISIdtmfScrJeon5UnMYWWk6BS
+
+Use this in the JavaScript code that is served to your users
+Private Key: 	6LdJ49QSAAAAAAC1i05NMY2_HNgj0khXDhN58nAP
+
+Use this when communicating between your server and our server. Be sure to keep it a secret.

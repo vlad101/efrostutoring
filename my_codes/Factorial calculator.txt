@@ -1,0 +1,16 @@
+# Factorial calculator
+
+from operator import mul
+
+x = input("Please enter a number to find factorial: >")
+k = x - 1
+
+numList =[]
+while(x >= k):
+    j = x - k
+    if (k >= 0):
+        numList.append(j)
+        k -= 1
+    else:
+        break
+print reduce(lambda x, y: x * y, numList) 

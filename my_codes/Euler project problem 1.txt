@@ -1,0 +1,20 @@
+Euler project problem 1 solved in python:
+#If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23. Find the sum of all the multiples of 3 or 5 below 1000.
+
+
+list1 = []
+for num in range (0, 1000, 1):
+    div, rem = divmod(num, 3)
+    if(rem == 0):
+        list1.append(num)
+print list1
+print "The sum of all the multiples of 3 below 1000: %d" %sum(list1)
+
+list2 = []
+for num in range (0, 1000, 1):
+    div, rem = divmod(num, 5)
+    if(rem == 0 and num%3 != 0):
+        list2.append(num)
+print list2
+print "The sum of all the multiples of 5 below 1000: %d" % sum(list2)
+print "The sum of all the multiples of 3 and 5 below 1000: %d" % (sum(list1) + sum(list2)) 
